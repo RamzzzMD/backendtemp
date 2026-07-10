@@ -30,6 +30,7 @@ async function main() {
   });
 
   app.set('io', io);
+  app.set('trust proxy', 1);
   app.use(cors({ origin: corsOptionValue }));
   app.use(express.json({ limit: '10mb' })); // emails with inline images can be sizeable
 
